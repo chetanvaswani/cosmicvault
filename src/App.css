@@ -1,0 +1,509 @@
+.App{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading{
+    width: 20%;
+}
+
+.heading-name{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.wallet-div{
+    height: 75%;
+    width: 35%;
+    /* background-color: #374c5d81; */
+    background-color: #202126;
+    /* background-color: black; */
+    border-radius: 50px;
+    border: 0.7px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chain{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-right: 0.7px solid rgba(255, 255, 255, 0.5);
+}
+
+.chain-logo{
+    width: 60%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.public-key-div{
+    width: 80%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+}
+
+.public-key-div:hover{
+    background-color: #141518;
+}
+
+.down-svg{
+    filter: brightness(0) invert(1);
+}
+
+.copy-public-key{
+    width: 10%;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left: 0.7px solid rgba(255, 255, 255, 0.5);
+}
+
+.copy-key-img{
+    width: 45%;
+    filter: brightness(0) invert(1);
+}
+
+.copy-public-key:hover{
+    width: 11%;
+    background-color: #141518;
+}
+
+.account{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12px;
+}
+
+.account-actions-div{
+    position: absolute;
+    width: 200px;
+    top: 60px;
+    right: 20px;
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.logout-btn{
+    width: 100%;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: transparent;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.account-action-icon{
+    width: 10%;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+}
+
+.account-action{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.profile-svg{
+    filter: brightness(0) invert(1);
+    width: 12%;
+    cursor: pointer;
+}
+
+.home-body{
+    position: absolute;
+    top: 60px;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.select-wallet{
+    width: 90%;
+    height: 90%;
+    background-color: #202126;
+    /* border-top: 0.7px solid rgba(255, 255, 255, 0.5); */
+    animation: 0.5s ease-out 0s 1 slideInFromBottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* .exit-animation{
+    animation: 0.5s ease-out 0s 1 slideOutToBottom;
+} */
+
+.select-wallet-heading{
+    width: 90%;
+    margin-top: 20px;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.select-wallet-heading-text{
+    font-size: 50px;
+}
+
+.select-wallet-btns{
+    display: flex;
+    gap: 10px;
+}
+
+.select-wallet-heading-btns{
+    width: 100px;
+    border: 1px solid white;
+    height: 40px;
+    background-color: #202126;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.select-wallet-heading-btns:active {
+    /* box-shadow: #D6D6E7 0 -3px -7px inset; */
+    transform: translateX(1px) translateY(2px);
+}
+
+.select-wallet-heading-btns:hover {
+    background-color: white;
+    color: black;
+}
+
+#close-btn{
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#add-new-wallet{
+    width: 120px;
+    border-radius: 5px;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes slideOutToBottom {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(200%);
+    }
+}
+
+.wallets{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    overflow-y: scroll;
+}
+
+.wallets-list{
+    width: 90%;
+    height: 250px;
+    border: 2px solid #141518;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-wallet-heading{
+    width: 95%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 32px;
+}
+
+.wallet-keys-display{
+    width: 100%;
+    height: 180px;
+    background-color: #0e0f14;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.public-key-display{
+    width: 95%;
+    height: 35%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.key-text{
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+}
+
+.private-key-display{
+    width: 95%;
+    height: 35%;
+    font-size: 20px;
+}
+
+.private-key-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-hide{
+    filter: brightness(0) invert(1);
+    width: 20px;
+    cursor: pointer;
+}
+
+.whole-display{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.display-div{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    margin-top: 7px;
+}
+
+.wallet-display{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-evenly;
+    /* border: 1px solid rgba(255, 255, 255, 0.467); */
+}
+
+.sol-balance{
+    margin-top: 20px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.balance-left{
+    display: flex;
+    gap: 12px;
+}
+
+.sol-bal-img{
+    width: 45px;
+    margin-left: 15px;
+}
+
+.sol-bal-logo{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.bal-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bal-heading{
+    font-size: 18px;
+}
+
+.bal-main{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.bal-right{
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.transaction-div{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.transaction-icon-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.transaction-icon{
+    width: 67px;
+    height: 63px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    background-color: #141518;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.transaction-icon:hover{
+    background-color: #101113;
+    .transaction-icon-img{
+        fill: #4c94ffbd;
+        stroke: #4c94ffbd;
+        width: 42%;
+    }
+}
+
+.transaction-icon-img{
+    width: 40%;
+    object-fit: contain;
+    fill: #4c94ff;
+    stroke: #4c94ff;
+    stroke-width: 0.7px;
+}
+
+.balance-total-div{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.balance-total-display{
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.wallet-total{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.nft-display{
+    width: 70%;
+    height: 100%;
+    background-color: #141518;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nft-display::-webkit-scrollbar {
+    display: none !important;
+}
+
+.nft-div{
+    width: 27%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.nft-img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
