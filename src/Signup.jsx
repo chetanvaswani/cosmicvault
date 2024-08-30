@@ -74,6 +74,7 @@ function NewPhrase({mnemonic, setWallet, setCurrentIndex, setPublicKeys, current
                     const secretStr = bs58.encode(Buffer.from(keypair._keypair.secretKey))
                     const publicSrt = bs58.encode(Buffer.from(keypair._keypair.publicKey))
                     localStorage.setItem('wallet', JSON.stringify({
+                        "mn": mn,
                         "seed": seed,
                         "sol": [
                             {
