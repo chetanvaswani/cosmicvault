@@ -1,0 +1,196 @@
+.SignupPage{
+    width: 80vw;
+    height: 100vh;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #CCD0CF;
+    /* font-family: "JetBrains Mono",monospace; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.welcome-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.welcome-heading{
+    font-size: 35px;
+    margin: 0;
+}
+
+.welcome-para{
+    margin-top: 10px;
+}
+
+.phrase-outer-div{
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 60%;
+    /* background-color: #374c5d81; */
+    background-color: #202126;
+    height: 325px;
+    border-radius: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.phrase-outer-div:hover{
+    /* background-color: rgba(0, 0, 0, .55); */
+    background-color: #202529;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.hidden{
+    display: none;
+}
+
+.inner-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 33%;
+    height: 17%;
+}
+
+.phrase-word{
+    padding-left: 30px;
+    font-size: 18px;
+}
+
+.old-phrase-outer-div{
+    width: 50%;
+    height: 275px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.old-phrase-inner{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    height: 20%;
+    background-color: #202529;
+    border-radius: 10px;
+}
+
+.word-input{
+    background-color: #202529;
+    border: none;
+    color: white;
+    width: 75%;
+    font-size: 17px;
+}
+
+.word-input:focus{
+    outline: none;
+    color: white;
+}
+
+
+.copy-msg{
+    border-top: 1px dashed rgba(255, 255, 255, 0.25);
+    display: flex;
+    color: rgba(255, 255, 255, 0.6);
+    justify-content: center;
+    align-items: center;
+    height: 12%;
+    width: 100%;
+}
+
+.welcome-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-btn {
+  align-items: center;
+  appearance: none;
+  background-color: white;
+  border-radius: 17px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 48px;
+  justify-content: center;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 20px;
+  width: 475px;
+}
+
+.counter{
+    color: rgba(255, 255, 255, 0.5);
+    display: inline;
+    font-size: 14px;
+}
+
+.create-btn:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.create-btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.create-btn:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.create-btn:disabled{
+    background-color: rgba(255, 255, 255, 0.453);
+    cursor: not-allowed;
+}
+
+.import-btn{
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bottom-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-icon{
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+}
