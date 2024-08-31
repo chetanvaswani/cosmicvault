@@ -578,3 +578,33 @@
     font-size: 20px;
     width: 50%;
   }
+
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+  .alert-div{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 3;
+    background-color: #202126;
+    height: 70px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    animation: 0.5s ease-out 0s 1 slideFromRight;
+    padding: 20px;
+  }
+
+
+  .hidden{
+    display: none
+  }

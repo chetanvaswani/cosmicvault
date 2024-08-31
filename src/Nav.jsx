@@ -6,6 +6,7 @@ import Logout from './assets/logout.svg'
 import './App.css';
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import myAlert from './myAlert.js';
 
 export default function Nav({currWallet, mode, setMode}){
     const [accActions, setAccActions] = useState(false)
@@ -43,6 +44,7 @@ export default function Nav({currWallet, mode, setMode}){
           </div>
           <div className='copy-public-key' onClick={() => {
             navigator.clipboard.writeText(currWallet.publicKey)
+            myAlert('PublicKey copied to the clipboard.')
           }} >
             <img src={Copy} className='copy-key-img' />
           </div>

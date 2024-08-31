@@ -48,6 +48,9 @@ export default function Home () {
           : mode === 'select wallet' ? <SelectWallet setMode={setMode} wallet={wallet} setCurrWallet={setCurrWallet} setWallet={setWallet} /> : false
         }
         </div>
+        <div className='alert-div hidden'>
+            
+        </div>
       </div>
     )
   }

@@ -63,7 +63,7 @@ const SendSOL = ({ currWallet, setMode, balance }) => {
       }
     } finally {
       setLoading(false);  // Stop loader
-      setMode('normal-mode');
+      setMode('normal-mode')
     }
   };
 

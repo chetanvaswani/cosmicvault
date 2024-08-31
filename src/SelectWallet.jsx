@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { derivePath } from "ed25519-hd-key";
 import './App.css';
 import { mnemonicToSeed } from "bip39";
+import myAlert from "./myAlert";
 
 export default function SelectWallet({setWallet, setMode, wallet, setCurrWallet,}){
   // const [seed, setSeed] = useState(null)
@@ -65,6 +66,7 @@ export default function SelectWallet({setWallet, setMode, wallet, setCurrWallet,
                   ]
                 }))
                 setMode('display wallet')
+                myAlert('Switched to new wallet')
               }} >
                 Add Wallet
               </button>
@@ -102,6 +104,7 @@ export default function SelectWallet({setWallet, setMode, wallet, setCurrWallet,
                           <div>Public Key</div>
                           <div className='key-text' onClick={() => {
                             navigator.clipboard.writeText(wal.publicKey)
+                            myAlert('public key copied to the clipboard')
                           }} >{wal.publicKey}</div>
                         </div>
                         <div className='private-key-display'>
@@ -111,6 +114,7 @@ export default function SelectWallet({setWallet, setMode, wallet, setCurrWallet,
                               visible ? 
                                 <div className='private-key-div' onClick={() => {
                                     navigator.clipboard.writeText(wal.privateKey)
+                                    myAlert('Privatekey copied to the clipboard')
                                   }} >
                                   <div className='key-text private-key-text'>{wal.privateKey}</div> 
                                   <img src={Hide} className='show-hide' onClick={() => {
