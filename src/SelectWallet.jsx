@@ -3,11 +3,26 @@ import nacl from "tweetnacl";
 import bs58 from 'bs58';
 import Show from './assets/show.svg';
 import Hide from './assets/hide.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { derivePath } from "ed25519-hd-key";
 import './App.css';
+import { mnemonicToSeed } from "bip39";
 
 export default function SelectWallet({setWallet, setMode, wallet, setCurrWallet,}){
+  // const [seed, setSeed] = useState(null)
+
+  // useEffect(() => {
+  //   async function getData(){
+  //     let res = JSON.parse(await localStorage.getItem('wallet'))
+  //     if (res){
+  //       setSeed(res.seed)
+  //     }
+  //   }
+  
+  //   if (seed === null){
+  //     getData()
+  //   }
+  // },[])
 
     return(
       <div className='select-wallet exit-animation' >
@@ -16,9 +31,10 @@ export default function SelectWallet({setWallet, setMode, wallet, setCurrWallet,
               Select Wallet
             </div>
             <div className='select-wallet-btns' >
-              <button className='select-wallet-heading-btns' id='add-new-wallet' onClick={() => {
+              <button className='select-wallet-heading-btns' id='add-new-wallet' onClick={async() => {
+                const seed = await mnemonicToSeed(wallet.mn);
                 const path = `m/44'/501'/${wallet.sol.length}'/0'`;
-                const derivedSeed = derivePath(path, wallet.seed.toString("hex")).key;
+                const derivedSeed = derivePath(path, seed.toString("hex")).key;
                 const secret = nacl.sign.keyPair.fromSeed(derivedSeed).secretKey;
                 const keypair = Keypair.fromSecretKey(secret);
                 const secretStr = bs58.encode(Buffer.from(keypair._keypair.secretKey))
