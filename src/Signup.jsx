@@ -67,7 +67,7 @@ function NewPhrase({mnemonic, setWallet, setCurrentIndex, setPublicKeys, current
                 <button className="create-btn" onClick={async () => {
                     let mn = mnemonic.join(' ')
                     const seed = await mnemonicToSeed(mn);
-                    const path = `m/44'/501'/${currentIndex}'/0'`;
+                    const path = `m/44'/501'/0'/0'`;
                     const derivedSeed = derivePath(path, seed.toString("hex")).key;
                     const secret = nacl.sign.keyPair.fromSeed(derivedSeed).secretKey;
                     const keypair = Keypair.fromSecretKey(secret);
@@ -78,6 +78,7 @@ function NewPhrase({mnemonic, setWallet, setCurrentIndex, setPublicKeys, current
                         "seed": seed,
                         "sol": [
                             {
+                                id: 0,
                                 publicKey: publicSrt,
                                 privateKey: secretStr,
                             }

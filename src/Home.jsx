@@ -22,7 +22,7 @@ export default function Home () {
           setWallet(res)
           // console.log(JSON.parse(res))
           setCurrWallet({
-            id: 0,
+            id: res.sol[0].id,
             publicKey: res.sol[0].publicKey,
             privateKey: res.sol[0].privateKey
           })

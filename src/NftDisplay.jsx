@@ -36,7 +36,7 @@ export default function NftDisplay({ nfts }) {
             }
             return null;
           } catch (error) {
-            console.log('Error fetching NFT metadata:');
+            // console.log('Error fetching NFT metadata:');
             return null;
           }
         }
@@ -58,7 +58,8 @@ export default function NftDisplay({ nfts }) {
               return [...prevNfts, ...uniqueNfts];
             });
           } catch (error) {
-            console.error('Error fetching all metadata:');
+            // console.error('Error fetching all metadata:');
+            return null
           }
         };
   

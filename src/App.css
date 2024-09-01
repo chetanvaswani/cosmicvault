@@ -11,6 +11,8 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
+
 .home{
     display: flex;
     flex-direction: column;
@@ -232,6 +234,16 @@
 .select-wallet-heading-btns:hover {
     background-color: white;
     color: black;
+}
+
+.select-this-wallet{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.delete-wallet{
+    cursor: pointer;
 }
 
 #close-btn{
@@ -542,6 +554,16 @@
     font-size: 15px;
     text-align: center;
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.send-field-input:focus{
+    outline: none;
+}
+
+.send-field-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .send-div{
@@ -608,3 +630,4 @@
   .hidden{
     display: none
   }
+
