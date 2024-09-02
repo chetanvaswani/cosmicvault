@@ -1,6 +1,6 @@
 import myAlert from './myAlert'
 
-export default function TranscationComponent({setMode, rate, balance}){
+export default function TranscationComponent({setMode, rate, balance, currWallet}){
   return (
     <div>
       <div className='balance-total-div'>
@@ -10,6 +10,7 @@ export default function TranscationComponent({setMode, rate, balance}){
       <div className='transaction-div' >
         <div className='receive-icon transaction-icon-div' onClick={() => {
           myAlert('PublicKey Copied to the clipboard. You can forward it to the sender.')
+          navigator.clipboard.writeText(currWallet.publicKey)
         }}>
           <div className='transaction-icon'>
           <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-arrow-down transaction-icon-img" viewBox="0 0 16 16">

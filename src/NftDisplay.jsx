@@ -3,12 +3,17 @@ import { Connection } from '@solana/web3.js';
 import './App.css';
 import { programs } from '@metaplex/js';
 import './Loader.css';
+import myAlert from './myAlert';
 
 const { metadata: { Metadata } } = programs;
 
 export default function NftDisplay({ nfts }) {
   const [loading, setLoading] = useState(true);
   const [nftsToDisplay, setNftsToDisplay] = useState([]);
+
+  useEffect(() => {
+    myAlert("NFT's being displayed are from some random wallet, and are just for the visual appeal.", 6000)
+  })
 
   useEffect(() => {
     if (nfts) {

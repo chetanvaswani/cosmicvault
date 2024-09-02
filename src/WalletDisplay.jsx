@@ -138,7 +138,7 @@ export default function WalletDisplay({currWallet}){
       <div className='display-div' >
       <div className='wallet-display'>
         {
-          mode === 'normal-mode' ? <NormalMode balance={balance} fungibleTokens={fungibleTokens} setMode={setMode} rate={rate} /> :
+          mode === 'normal-mode' ? <NormalMode balance={balance} fungibleTokens={fungibleTokens} setMode={setMode} currWallet={currWallet} rate={rate} /> :
           mode === 'send-mode' ? <SendToken currWallet={currWallet} balance={balance} setMode={setMode} /> :
           mode === 'transaction-history' ? <TransactionHistory currWallet={currWallet} setMode={setMode} /> : false
         }
@@ -149,11 +149,11 @@ export default function WalletDisplay({currWallet}){
     )
   }
 
-function NormalMode({balance, fungibleTokens, setMode, rate}){
+function NormalMode({balance, fungibleTokens, setMode, rate, currWallet}){
   return(
     <div className='normal-mode-div'>
       <div>
-      <TranscationComponent setMode={setMode} rate={rate} balance={balance} />
+      <TranscationComponent setMode={setMode} rate={rate} balance={balance} currWallet={currWallet} />
       <TokenDisplay balance={balance} rate={rate} fungibleTokens={fungibleTokens}  />
       </div>
       <div className='transaction-history-btn-div'>
