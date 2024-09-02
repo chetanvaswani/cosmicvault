@@ -7,6 +7,7 @@ import { TokenListProvider } from '@solana/spl-token-registry';
 import TranscationComponent from './TransactionComponent';
 import NftDisplay from './NftDisplay';
 import SendToken from './SendToken';
+import TransactionHistory from './TransactionHistory';
 
 export default function WalletDisplay({currWallet}){
     const [balance, setBalance] = useState(null)
@@ -138,7 +139,8 @@ export default function WalletDisplay({currWallet}){
       <div className='wallet-display'>
         {
           mode === 'normal-mode' ? <NormalMode balance={balance} fungibleTokens={fungibleTokens} setMode={setMode} rate={rate} /> :
-          mode === 'send-mode' ? <SendToken currWallet={currWallet} balance={balance} setMode={setMode} /> : false
+          mode === 'send-mode' ? <SendToken currWallet={currWallet} balance={balance} setMode={setMode} /> :
+          mode === 'transaction-history' ? <TransactionHistory currWallet={currWallet} setMode={setMode} /> : false
         }
       </div>
       <NftDisplay nfts={nfts} />
@@ -149,17 +151,26 @@ export default function WalletDisplay({currWallet}){
 
 function NormalMode({balance, fungibleTokens, setMode, rate}){
   return(
-    <>
+    <div className='normal-mode-div'>
+      <div>
       <TranscationComponent setMode={setMode} rate={rate} balance={balance} />
       <TokenDisplay balance={balance} rate={rate} fungibleTokens={fungibleTokens}  />
-    </>
+      </div>
+      <div className='transaction-history-btn-div'>
+        <div className='transaction-history-btn' onClick={() => {
+          setMode('transaction-history')
+        }}>
+          <h3>Transaction History</h3>
+        </div>
+      </div>
+    </div>
   )
 }
 
 function TokenDisplay({balance, rate, fungibleTokens}){
 
   return (
-    <>
+    <div className='fungible-token-display'>
       <div className='sol-balance'>
         <div className='balance-left'>
             <div className='sol-bal-img' >
@@ -191,7 +202,7 @@ function TokenDisplay({balance, rate, fungibleTokens}){
           )
         }) :  false
       }
-    </>
+    </div>
   )
 }
   
