@@ -38,7 +38,6 @@ export default function Nav({currWallet, mode, setMode}){
             }
           }} >
             <div>
-              {console.log(currWallet)}
               Wallet-{currWallet.id + 1} {publicKeyDisplay}
             </div>
             <img src={Down} className='down-svg' />

@@ -85,7 +85,6 @@ export default function SelectWallet({setWallet, setMode, wallet, setCurrWallet,
               {
                 wallet.sol.map((wal, index) => {
                   const [visible, setVisible] = useState(false)
-                  console.log(wal)
                   return(
                     <div className='wallets-list' id={`wallet-numder-${wal.id}`} key={wal.id} >
                       <div className='single-wallet-heading'>

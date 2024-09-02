@@ -26,7 +26,7 @@ const TransactionHistory = ({ currWallet, setMode }) => {
         const transactionDetails = await Promise.all(transactionPromises);
 
         setTransactions(transactionDetails);
-        console.log(transactionDetails);
+        // console.log(transactionDetails);
       } catch (error) {
         console.error('Error fetching transaction history:', error);
       } finally {
