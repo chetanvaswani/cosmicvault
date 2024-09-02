@@ -13,7 +13,7 @@ export default function NftDisplay({ nfts }) {
 
   useEffect(() => {
     myAlert("NFT's being displayed are from some random wallet, and are just for the visual appeal.", 6000)
-  })
+  }, [loading])
 
   useEffect(() => {
     if (nfts) {
