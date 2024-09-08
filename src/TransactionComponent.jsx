@@ -1,4 +1,5 @@
 import myAlert from './myAlert'
+import './TransactionComponent.css'
 
 export default function TranscationComponent({setMode, rate, balance, currWallet}){
   return (

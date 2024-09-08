@@ -1,0 +1,56 @@
+.fungible-token-display{
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.fungible-token-display::-webkit-scrollbar {
+    display: none !important;
+}
+
+
+.sol-balance{
+    margin-top: 20px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.balance-left{
+    display: flex;
+    gap: 12px;
+    width: 70%;
+}
+
+.sol-bal-img{
+    width: 45px;
+    margin-left: 15px;
+}
+
+.sol-bal-logo{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.bal-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bal-heading{
+    font-size: 18px;
+}
+
+.bal-main{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.bal-right{
+    margin-right: 15px;
+    font-size: 20px;
+}

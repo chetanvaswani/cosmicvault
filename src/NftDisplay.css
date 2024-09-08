@@ -1,0 +1,30 @@
+
+.nft-display{
+    width: 70%;
+    height: calc(100% - 20px);
+    background-color: #141518;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nft-display::-webkit-scrollbar {
+    display: none !important;
+}
+
+.nft-div{
+    width: 27%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.nft-img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}

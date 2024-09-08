@@ -4,6 +4,7 @@ import Account from './assets/account.svg'
 import Down from './assets/down.svg';
 import Logout from './assets/logout.svg'
 import './App.css';
+import './Nav.css'
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import myAlert from './myAlert.js';

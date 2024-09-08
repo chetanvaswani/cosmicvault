@@ -3,6 +3,7 @@ import { Connection, PublicKey, LAMPORTS_PER_SOL }  from '@solana/web3.js';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
+import './WalletDisplay.css'
 import { TokenListProvider } from '@solana/spl-token-registry';
 import TranscationComponent from './TransactionComponent';
 import NftDisplay from './NftDisplay';

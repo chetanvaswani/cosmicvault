@@ -1,0 +1,72 @@
+
+.transaction-history-btn-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .transaction-history-btn{
+    height: 40px;
+    width: 70%;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .transaction-history-btn:hover{
+    background-color: white;
+    color: black;
+  }
+
+  .transaction-history-div{
+    height: 100%;
+    /* overflow-y: scroll; */
+    animation: 0.5s ease-out 0s 1 slideInFromBottom;
+  }
+
+.transaction-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: visible;
+    height: 100%;
+}
+
+.transactions{
+    width: 80%;
+    word-wrap: break-word;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: scroll;
+}
+
+.transactions::-webkit-scrollbar {
+    display: none !important;
+}
+
+.each-transaction{
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.transactions-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 20px 10px 20px;
+}
+
+.grey{
+    display: inline;
+    color: rgba(255, 255, 255, 0.601);
+}

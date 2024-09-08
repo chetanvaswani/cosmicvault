@@ -1,0 +1,144 @@
+.nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading{
+    width: 20%;
+}
+
+.heading-name{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.wallet-div{
+    height: 75%;
+    width: 35%;
+    /* background-color: #374c5d81; */
+    background-color: #202126;
+    /* background-color: black; */
+    border-radius: 50px;
+    border: 0.7px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chain{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-right: 0.7px solid rgba(255, 255, 255, 0.5);
+}
+
+.chain-logo{
+    width: 60%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.public-key-div{
+    width: 80%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+}
+
+.public-key-div:hover{
+    background-color: #141518;
+}
+
+.down-svg{
+    filter: brightness(0) invert(1);
+}
+
+.copy-public-key{
+    width: 10%;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left: 0.7px solid rgba(255, 255, 255, 0.5);
+}
+
+.copy-key-img{
+    width: 45%;
+    filter: brightness(0) invert(1);
+}
+
+.copy-public-key:hover{
+    width: 11%;
+    background-color: #141518;
+}
+
+.account{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12px;
+}
+
+.account-actions-div{
+    position: absolute;
+    width: 200px;
+    top: 60px;
+    right: 20px;
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.logout-btn{
+    width: 100%;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: transparent;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.account-action-icon{
+    width: 10%;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+}
+
+.account-action{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.profile-svg{
+    filter: brightness(0) invert(1);
+    width: 12%;
+    cursor: pointer;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Connection, PublicKey } from '@solana/web3.js';
 import './App.css';
+import './TransactionHistory.css'
 
 const TransactionHistory = ({ currWallet, setMode }) => {
   const [transactions, setTransactions] = useState([]);

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Connection } from '@solana/web3.js';
 import './App.css';
+import './NftDisplay.css'
 import { programs } from '@metaplex/js';
 import './Loader.css';
 import myAlert from './myAlert';
@@ -22,7 +23,7 @@ export default function NftDisplay({ nfts }) {
         'https://solana-devnet.g.alchemy.com/v2/vKuHEPznw2q3zP6O2FEEoF5OfTMQ7Jpt',
         'confirmed'
       );
-      const toMint = nfts.slice(0, 40);
+      const toMint = nfts.slice(25, 50);
 
       async function fetchNFTMetadata(mintAddress) {
         try {

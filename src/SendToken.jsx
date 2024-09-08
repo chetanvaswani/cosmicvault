@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import bs58 from 'bs58';
+import './SendToken.css'
 import { Connection, PublicKey, Keypair, Transaction, SystemProgram, sendAndConfirmTransaction, LAMPORTS_PER_SOL } from '@solana/web3.js';
 
 const SendSOL = ({ currWallet, setMode, balance }) => {

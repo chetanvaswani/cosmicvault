@@ -6,6 +6,7 @@ import Hide from './assets/hide.svg';
 import { useState, useEffect } from 'react';
 import { derivePath } from "ed25519-hd-key";
 import './App.css';
+import './SelectWallet.css'
 import { mnemonicToSeed } from "bip39";
 import myAlert from "./myAlert";
 
