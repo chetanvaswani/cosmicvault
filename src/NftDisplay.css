@@ -28,3 +28,9 @@
     object-fit: contain;
     border-radius: 20px;
 }
+
+@media only screen and (max-width: 700px) {
+    .nft-display{
+        display: none;
+    }
+}

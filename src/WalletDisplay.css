@@ -54,3 +54,9 @@
     margin-right: 15px;
     font-size: 20px;
 }
+
+@media only screen and (max-width: 700px) {
+    .wallet-display{
+        width: 100%;
+    }
+}

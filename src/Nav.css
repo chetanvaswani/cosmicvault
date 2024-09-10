@@ -142,3 +142,79 @@
     width: 12%;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1325px) {
+    .wallet-div{
+        width: 40%;
+    }
+    .profile-svg{
+        width: 16%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .wallet-div{
+        width: 45%;
+    }
+    .profile-svg{
+        width: 17%;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .wallet-div{
+        width: 50%;
+    }
+    .profile-svg{
+        width: 18%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .wallet-div{
+        width: 55%;
+    }
+    .profile-svg{
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .heading{
+        display: none;
+    }
+    .wallet-div{
+        margin-left: 10px;
+        width: 80%;
+    }
+    .profile-svg{
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .profile-svg{
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .account{
+        display: none;
+    }
+    .wallet-div{
+        width: 95%;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .account{
+        display: none;
+    }
+    .wallet-div{
+        width: 95%;
+        font-size: 12px;
+    }
+}
