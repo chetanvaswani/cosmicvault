@@ -109,7 +109,7 @@ function OldPhrase({setWallet}){
                     return(
                         <div key={obj} className="old-phrase-inner" >
                             <div className="input-box-num" > {index + 1} </div>
-                            <input type="text" className="word-input" id={`word-input-${obj}`} required />
+                            <input type="text" className="word-input" id={`word-input-${obj}`} required autoComplete="off" />
                         </div>
                     )
                 }) 

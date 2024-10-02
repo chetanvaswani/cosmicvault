@@ -98,4 +98,12 @@
     display: none
   }
 
-  
+  @media only screen and (max-width: 700px) {
+    .alert-div{
+      height: fit-content;
+      width: 70%;
+    }
+    .hidden{
+      display: none
+    }
+  }

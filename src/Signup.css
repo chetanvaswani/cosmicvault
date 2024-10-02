@@ -55,13 +55,14 @@
 .inner-div{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: nowrap;
     align-items: center;
     width: 33%;
     height: 17%;
 }
 
 .phrase-word{
-    padding-left: 30px;
+    padding-left: 20%;
     font-size: 18px;
 }
 
@@ -193,4 +194,36 @@
     height: 27px;
     width: 35px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    .welcome-heading{
+        font-size: 20px;
+        text-align: center;
+    }    
+    .create-btn {
+        width: 90%;
+        font-size: 15px;
+    }
+    .import-btn{
+        font-size: 16px;
+    }
+    .phrase-outer-div{
+        width: 95%;
+    }
+    .phrase-word{
+        font-size: 13px;
+    }
+    .bottom-btns{
+        width: 80%;
+    }
+    .old-phrase-outer-div{
+        width: 100%;
+    }
+    .old-phrase-inner{
+        font-size: 14px;
+    }
+    .word-input{
+        font-size: 14px;
+    }
 }
