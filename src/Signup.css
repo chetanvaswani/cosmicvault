@@ -1,6 +1,6 @@
 .SignupPage{
     width: 80vw;
-    height: 100vh;
+    height: 100%;
     padding-top: 30px;
     display: flex;
     flex-direction: column;
